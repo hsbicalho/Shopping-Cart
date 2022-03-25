@@ -89,5 +89,5 @@ function loadFromStorage() {
 window.onload = () => { 
   getProducts();
   searchProduct();
-  loadFromStorage();
+  if (localStorage.getItem('arrayItem') !== null) loadFromStorage();
 };

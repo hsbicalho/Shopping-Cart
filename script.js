@@ -79,8 +79,7 @@ document.addEventListener('click', ({ target }) => {
 });
 
 async function getProducts(name) {
-  const products = await fetchProducts(name);
-  const { results } = await products.json();
+  const { results } = await fetchProducts(name);
   results.forEach((product) => query('.items')
     .appendChild(createProductItemElement(product)));
 }

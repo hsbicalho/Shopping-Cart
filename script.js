@@ -57,10 +57,12 @@ function createCartItemElement({ id: sku, title: name, price: salePrice, thumbna
 }
 
 async function addElementToCart(id) {
-  const item = await fetch(`https://api.mercadolibre.com/items/${id}`);
-  const fechItem = await item.json();
+  /* const item = await fetch(`https://api.mercadolibre.com/items/${id}`);
+  const fechItem = await item.json(); */
+  const fItem = await fetchItem(id);
+  console.log(fItem);
   const liItem = document.querySelector('.cart__items');
-  liItem.appendChild(createCartItemElement(fechItem));
+  liItem.appendChild(createCartItemElement(fItem));
   saveCartItems();
   sumAsync();
 }

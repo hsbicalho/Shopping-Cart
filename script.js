@@ -20,7 +20,7 @@ async function sumAsync() {
   const itemsNames = itemsList.map(({ innerText }) => innerText);
   const priceItemsList = itemsNames.map((cartName) => +cartName.split('PRICE: $')[1]);
   const eachPriceList = priceItemsList.reduce((acc, price) => acc + price, 0);
-  const totalPrice = document.querySelector('.price-cart-products');
+  const totalPrice = document.querySelector('.total-price');
   totalPrice.innerText = eachPriceList;
 }
 

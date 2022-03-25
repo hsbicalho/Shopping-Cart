@@ -140,6 +140,15 @@ body {
   overflow-y: scroll;
 }
 
+.cart_item_img {
+  border-radius: 50%;
+  display: flex;
+}
+
+.cart__item {
+  display: flex;
+}
+
 .empty-cart {
   width: 170px;
   height: 35px;
